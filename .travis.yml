@@ -1,0 +1,14 @@
+#see http://about.travis-ci.org/docs/user/build-configuration/
+language: scala
+scala:
+   - 2.11.1
+branches:
+  only:
+    - travis
+notifications:
+  email:
+    recipients:
+      - jasonnerothin@gmail.com
+jdk:
+  - oraclejdk7
+  - oraclejdk8
