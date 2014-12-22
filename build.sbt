@@ -89,6 +89,10 @@ resolvers += "cloudbees-jpn" at "http://repository-jasonnerothin.forge.cloudbees
 
 resolvers += "openspaces" at "http://maven-repository.openspaces.org"
 
+resolvers += "jboss-public" at "http://repository.jboss.org/nexus/content/groups/public-jboss/"
+
+resolvers += "jboss-releases" at "https://repository.jboss.org/nexus/content/repositories/releases/"
+
 // define the repository to publish to
 //publishTo := Some("name" at "url")
 
