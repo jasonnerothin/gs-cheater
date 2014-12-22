@@ -15,18 +15,42 @@ scalaVersion := "2.11.1"
 //scalaSource in Test := baseDirectory.value / "test"
 
 // add a test dependency on ScalaCheck
-libraryDependencies += "org.scalacheck" % "scalacheck_2.11" % "1.11.5"
 
 // add compile dependencies on some dispatch modules
 libraryDependencies ++= Seq(
-  "ch.qos.logback" % "logback-classic" % "1.1.2",
+  "ch.qos.logback" % "logback-classic" % "1.1.2" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  ),
   "com.jasonnerothin" % "testing" % "0.01" % Test,
-  "com.gigaspaces" % "gs-openspaces" % "10.0.1-11800-RELEASE",
-  "com.gigaspaces" % "gs-runtime" % "10.0.1-11800-RELEASE",
-  "com.typesafe.akka" %% "akka-actor" % "2.3.7",
-  "com.typesafe" % "config" % "1.2.1",
+  "com.gigaspaces" % "gs-openspaces" % "10.0.1-11800-RELEASE" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  ),
+  "com.gigaspaces" % "gs-runtime" % "10.0.1-11800-RELEASE" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  ),
+  "com.typesafe.akka" %% "akka-actor" % "2.3.7" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  ),
+  "com.typesafe" % "config" % "1.2.1" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  ),
+  "org.scalacheck" % "scalacheck_2.11" % "1.11.5" % Test,
   "org.scalatest" %% "scalatest" % "2.2.3" % Test,
-  "org.slf4s" %% "slf4s-api" % "1.7.7"
+  "org.slf4s" %% "slf4s-api" % "1.7.7" excludeAll(
+    ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"),
+    ExclusionRule(organization = "javax.jms")
+  )
 )
 
 // Set a dependency based partially on a val.
