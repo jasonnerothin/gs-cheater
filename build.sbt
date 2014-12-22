@@ -93,6 +93,10 @@ resolvers += "jboss-public" at "http://repository.jboss.org/nexus/content/groups
 
 resolvers += "jboss-releases" at "https://repository.jboss.org/nexus/content/repositories/releases/"
 
+resolvers += "springsource-bundle-releases" at "http://repository.springsource.com/maven/bundles/release"
+
+resolvers += "springsource-external-bundle-releases" at "http://repository.springsource.com/maven/bundles/external"
+
 // define the repository to publish to
 //publishTo := Some("name" at "url")
 
