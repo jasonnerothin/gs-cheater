@@ -11,8 +11,10 @@ import org.openspaces.admin.space.SpaceInstance
  * Created by IntelliJ IDEA.
  * User: jason
  * Date: 8/10/14
- * Time: 6:14 AM
+ * Time
+ * : 6:14 AM
  */
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 class CheckGridStatus extends AdminCreation {
 
   override implicit val settings: RebalanceSettings = new Object with RebalanceSettings
@@ -92,7 +94,7 @@ class CheckGridStatus extends AdminCreation {
         println(lineOfX)
         val msg = s"Stateful PU is not a primary or a backup:\n\n $info "
         println(msg)
-        logger.error(msg)
+//        logger.error(msg)
         println(lineOfX)
       case _ =>
     }

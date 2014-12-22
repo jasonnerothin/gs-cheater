@@ -20,10 +20,12 @@ libraryDependencies += "org.scalacheck" % "scalacheck_2.11" % "1.11.5"
 // add compile dependencies on some dispatch modules
 libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.1.2",
-  "com.jasonnerothin" % "testing" % "0.01",
+  "com.jasonnerothin" % "testing" % "0.01" % Test,
   "com.gigaspaces" % "gs-openspaces" % "10.0.1-11800-RELEASE",
   "com.gigaspaces" % "gs-runtime" % "10.0.1-11800-RELEASE",
+  "com.typesafe.akka" %% "akka-actor" % "2.3.7",
   "com.typesafe" % "config" % "1.2.1",
+  "org.scalatest" %% "scalatest" % "2.2.3" % Test,
   "org.slf4s" %% "slf4s-api" % "1.7.7"
 )
 
@@ -46,11 +48,11 @@ javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 // append -deprecation to the options passed to the Scala compiler
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
-oneJarSettings
+//oneJarSettings
 
-libraryDependencies += "commons-lang" % "commons-lang" % "2.6"
+//libraryDependencies += "commons-lang" % "commons-lang" % "2.6"
 
-mainClass in oneJar := Some("com.gigaspaces.sbp.RebalanceRunner")
+//mainClass in oneJar := Some("com.gigaspaces.sbp.RebalanceRunner")
 
 // define the statements initially evaluated when entering 'console', 'consoleQuick', or 'consoleProject'
 //initialCommands := """
@@ -122,7 +124,7 @@ fork := true
 fork in Test := true
 
 // add a JVM option to use when forking a JVM for 'run'
-javaOptions += "-Xmx2G"
+javaOptions += "-Xmx2g"
 
 // only use a single thread for building
 //parallelExecution := true

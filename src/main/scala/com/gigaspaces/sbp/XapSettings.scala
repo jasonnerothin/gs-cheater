@@ -12,6 +12,7 @@ import scala.concurrent.Future
  * Date: 8/8/14
  * Time: 1:45 PM
  */
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 trait RebalanceSettings {
 
   val defaultSettings = DefaultSettings
@@ -38,10 +39,13 @@ trait RebalanceSettings {
 
 }
 
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 object HardCodedSettings extends RebalanceSettings
 
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 object DefaultSettings extends DefaultSettings
 
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 trait DefaultSettings{
 
   val checkPeriodMillis = 2500L

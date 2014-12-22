@@ -2,12 +2,11 @@ package com.gigaspaces.sbp
 
 import java.util.Date
 
-import org.slf4j.{LoggerFactory, Logger}
+import org.slf4j.{Logger, LoggerFactory}
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent._
 import scala.concurrent.duration._
-import scala.concurrent.ExecutionContext.Implicits.global
-import Global.Implicits._
 import scala.language.postfixOps
 
 /**
@@ -17,6 +16,7 @@ import scala.language.postfixOps
  * Time: 10:04 PM
  * Provides a rebalance script, as defined in the README file.
  */
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 class Rebalance(gridStatus: CheckGridStatus) {
 
   private[Rebalance] val logger: Logger = LoggerFactory.getLogger(classOf[Rebalance])

@@ -4,6 +4,7 @@ import Global.Implicits._
 import scala.language.postfixOps
 
 // this class is excessive, can be substituted by main method in Rebalance
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
 object RebalanceRunner {
 
   def main(args: Array[String]) {

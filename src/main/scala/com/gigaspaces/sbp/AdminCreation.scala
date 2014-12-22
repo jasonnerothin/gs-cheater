@@ -6,7 +6,7 @@ import org.openspaces.admin.gsc.GridServiceContainers
 import org.openspaces.admin.machine.Machines
 import org.openspaces.admin.space.Spaces
 import org.openspaces.admin.{Admin, AdminFactory}
-import org.slf4j.{Logger, LoggerFactory}
+import org.slf4s.Logging
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -17,9 +17,9 @@ import scala.concurrent.Future
  * Date: 8/8/14
  * Time: 1:44 PM
  */
-trait AdminCreation {
+@deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
+trait AdminCreation extends Logging{
 
-  private[sbp] val logger: Logger = LoggerFactory.getLogger(classOf[AdminCreation])
   private val startupFailureMessage = "ERROR starting up admin api."
 
   private val gscWaitPatienceMs = 500L
@@ -32,6 +32,7 @@ trait AdminCreation {
 
     val factory = new AdminFactory
     factory.addLocators(settings.lookupLocators())
+    factory.addLocator(settings.lookupLocators())
     factory.addGroups(settings.lookupGroups())
 
     factory.discoverUnmanagedSpaces
@@ -57,7 +58,7 @@ trait AdminCreation {
 
   private[this] def printAndError(msg: String): Unit = {
     println(msg)
-    logger.error(msg)
+    log.error(msg)
   }
 
   private def squawkAndDie(): Unit = {

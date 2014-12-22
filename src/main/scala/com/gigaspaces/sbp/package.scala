@@ -8,8 +8,10 @@ package com.gigaspaces
  */
 package object sbp {
 
+  @deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
   val lineOfX: String = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
+  @deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
   private val magicIntsStopAt = 0
 
   /**
@@ -20,6 +22,7 @@ package object sbp {
    * @param i to test
    * @return an Option[Int]
    */
+  @deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
   def magicIntToOption(i: Int): Option[Int] = {
     if (i >= magicIntsStopAt) Some(i)
     else None
@@ -31,6 +34,7 @@ package object sbp {
    * @tparam T any old Object
    * @return an Option[T]
    */
+  @deprecated("code was copy-pasted in from https://github.com/jasonnerothin/gs-rebalance and is hanging around only for reference purposes.")
   def noneIfNull[T](obj: T): Option[T] = {
     if (obj == null) None
     else Some(obj)
