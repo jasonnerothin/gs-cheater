@@ -80,9 +80,11 @@ scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
 // add a maven-style repository
 //resolvers += "name" at "url"
-resolvers += Resolver.mavenLocal
+//resolvers += Resolver.mavenLocal
 
 // add a sequence of maven-style repositories
+resolvers += "central" at "http://central.maven.org/maven2/"
+
 resolvers += "sbt-assembly-resolver-0" at "http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases"
 
 resolvers += "cloudbees-jpn" at "http://repository-jasonnerothin.forge.cloudbees.com/release/"
