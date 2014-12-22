@@ -87,6 +87,8 @@ resolvers += "sbt-assembly-resolver-0" at "http://repo.scala-sbt.org/scalasbt/sb
 
 resolvers += "cloudbees-jpn" at "http://repository-jasonnerothin.forge.cloudbees.com/release/"
 
+resolvers += "openspaces" at "http://maven-repository.openspaces.org"
+
 // define the repository to publish to
 //publishTo := Some("name" at "url")
 
